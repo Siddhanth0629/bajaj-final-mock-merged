@@ -1,0 +1,483 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  position: relative;
+  height: 100%;
+}
+
+/* global font family */
+@font-face {
+  font-family: Gothambold;
+  src: url("/assets/Gotham/Gotham-Bold.otf");
+}
+@font-face {
+  font-family: Gothambook;
+  src: url("/assets/Gotham/GothamBook.ttf");
+}
+@font-face {
+  font-family: GothamLight;
+  src: url("/assets/Gotham/Gotham-Light.otf");
+}
+@font-face {
+  font-family: Gotham Ultra;
+  src: url("/assets/Gotham/Gotham-Ultra.otf");
+}
+
+/* global css */
+.hide-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none !important;
+  width: 0px !important;
+  height: 0px !important;
+}
+.custom-scrollbar::-webkit-scrollbar {
+  width: 1em;
+  height: 8px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.16);
+  border-radius: 100vw;
+  margin-block: 0.5em;
+  margin-left: 20rem;
+  margin-right: 20rem;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  border-radius: 24px;
+  background: #ff0004;
+  border-radius: 100vw;
+}
+.text-decoration-none {
+  text-decoration: none;
+}
+.backdropFilter {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+}
+.header-title {
+  color: #fff;
+  font-family: Gotham Ultra;
+  font-style: italic;
+  font-weight: 500;
+  letter-spacing: 1.92px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.italic-title {
+  font-family: Gotham Ultra;
+  font-style: italic;
+  font-weight: 500;
+  letter-spacing: 1.92px;
+  text-transform: uppercase;
+  color: transparent;
+  /* -webkit-text-stroke-width: 2.4px; */
+  -webkit-text-stroke-color: #ff0004;
+  white-space: nowrap;
+}
+.content__desc {
+  color: #fff;
+  text-align: center;
+  font-family: Gothambook;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+}
+/* loader */
+#loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  background-color: #010101;
+}
+#loader-lottie-container {
+  width: 500px;
+}
+
+/* end */
+
+/* NAVBAR */
+.nav {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.96);
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  overflow-x: auto;
+  display: block;
+}
+.nav-link-container {
+  display: flex;
+  gap: 8px;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0px 0px 0px 80px;
+  white-space: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.nav-item {
+  padding: 16px;
+  position: relative;
+  cursor: pointer;
+  display: block;
+}
+.nav-link {
+  color: #fff;
+  font-family: GothamLight;
+  line-height: 140%;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  cursor: pointer;
+}
+.nav-item.active::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0px;
+  width: 95%;
+  height: 3px;
+  background: red;
+  border-radius: 8px 8px 0px 0px;
+}
+.nav-item.active .nav-link {
+  font-weight: 700;
+}
+/* end */
+
+/* GET EXPERIENCE */
+.get-experience {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  /* height: calc(100vh - 57px); */
+  z-index: 2;
+}
+.bgvideo {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.get-experience::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1;
+}
+.content__container {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+.get-experience-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.get-experience-title {
+  font-size: 48px;
+}
+.get-experience-italic-title {
+  font-size: 48px;
+  -webkit-text-stroke-width: 2.4px;
+}
+.ctas {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.redirect-btn {
+  position: relative;
+  display: flex;
+  text-decoration: none;
+}
+.redirect-btn .corner-border {
+  transform: translate3d(0.2, 0.2, 0.2);
+  opacity: 0;
+  transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+}
+.redirect-btn:hover .image1 {
+  opacity: 1;
+  transform: translate3d(5px, 5px, 20px);
+}
+.redirect-btn:hover .image2 {
+  opacity: 1;
+  transform: translate3d(5px, 6px, 20px);
+}
+.redirect-btn:hover .image3 {
+  opacity: 1;
+  transform: translate3d(5px, 6px, 20px);
+}
+.redirect-btn:hover .image4 {
+  opacity: 1;
+  transform: translate3d(5px, 6px, 20px);
+}
+.image1 {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  transform: translateX(-10%);
+}
+.image2 {
+  position: absolute;
+  right: 0;
+  rotate: -90deg;
+}
+.image3 {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  rotate: 90deg;
+}
+.image4 {
+  position: absolute;
+  top: 0;
+  rotate: 180deg;
+}
+.enquire-now1 {
+  color: #fff;
+  position: relative;
+  font-family: Gothambold;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  padding: 12px 24px;
+  letter-spacing: 0.36px;
+  text-transform: uppercase;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.16);
+  cursor: pointer;
+}
+.feature_btn1,
+.feature_btn {
+  text-decoration: none;
+  color: #fff;
+  font-family: Gothambold;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.36px;
+  text-transform: uppercase;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.16);
+  cursor: pointer;
+  white-space: nowrap;
+}
+.feature_btn {
+  padding: 12px 24px;
+}
+.feature_btn1 {
+  padding: 12px 36px;
+}
+
+.webgl3 {
+  width: 100vw;
+  height: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  touch-action: none;
+}
+
+.section {
+  width: 100vw;
+  height: 100vh;
+  color: white;
+  position: relative;
+  z-index: 3;
+}
+
+.section__one {
+  color: black;
+  /* background-color: #000; */
+}
+
+.section__two {
+  /* background-color: aqua; */
+}
+
+.section__three {
+  /* background-color: #ff0004; */
+}
+
+.fixed-canvas {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+
+/* KEY Specifications */
+.key-specification {
+  position: relative;
+  z-index: 6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 90px;
+  width: 100%;
+  height: 100vh;
+  background-image: url("/images/KeySpecsBackground.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: none;
+}
+.specification-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+.key-spec-header-container {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.key-specs-header {
+  font-size: 48px;
+}
+.key-spec-italic-title {
+  font-size: 48px;
+  -webkit-text-stroke-width: 2.4px;
+}
+.spcscontainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+  grid-row-gap: 64px;
+  grid-column-gap: 24px;
+  width: 100%;
+}
+.feature-item {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.key-specs-title {
+  color: #fff;
+  text-align: center;
+  font-family: Gothambold;
+  font-size: 40px;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 150%;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 8px;
+  white-space: nowrap;
+}
+.key-specs-title sub {
+  color: #fff;
+  font-family: Gothambold;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 150%;
+}
+.key-spec-desc {
+  color: rgba(255, 255, 255, 0.9);
+  text-align: center;
+  font-family: Gothambook;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+.brochure-container {
+  display: flex;
+  gap: 24px;
+}
+.brochurebtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #fff;
+  padding: 12px 24px;
+  font-family: Gothambold;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.36px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.feature__text {
+  font-size: 40px;
+  font-weight: 500;
+  font-family: Gotham Ultra;
+  font-style: italic;
+  text-transform: uppercase;
+  position: absolute;
+  text-align: justify;
+  line-height: 56px;
+}
+
+.red-title {
+  color: transparent;
+  -webkit-text-stroke-width: 1.2px;
+  -webkit-text-stroke-color: #ff0004;
+}
+
+/* Section One */
+.light__img,
+.light__img__tab {
+  display: none;
+}
+
+.section__one .feature__text {
+  right: 10%;
+  top: 50%;
+  transform: translateY(-60%);
+  opacity: 0;
+  position: fixed;
+  z-index: 9;
+  color: white;
+}
+
+.light__img__desktop {
+  position: fixed;
+  top: -5%;
+  left: 7%;
+  transform: scale(1.5);
+  opacity: 0;
+}
