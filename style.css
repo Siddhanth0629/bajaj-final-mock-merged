@@ -15,14 +15,17 @@ body {
   font-family: Gothambold;
   src: url("/assets/Gotham/Gotham-Bold.otf");
 }
+
 @font-face {
   font-family: Gothambook;
   src: url("/assets/Gotham/GothamBook.ttf");
 }
+
 @font-face {
   font-family: GothamLight;
   src: url("/assets/Gotham/Gotham-Light.otf");
 }
+
 @font-face {
   font-family: Gotham Ultra;
   src: url("/assets/Gotham/Gotham-Ultra.otf");
@@ -33,15 +36,18 @@ body {
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
+
 .hide-scrollbar::-webkit-scrollbar {
   display: none !important;
   width: 0px !important;
   height: 0px !important;
 }
+
 .custom-scrollbar::-webkit-scrollbar {
   width: 1em;
   height: 8px;
 }
+
 .custom-scrollbar::-webkit-scrollbar-track {
   background: rgba(255, 255, 255, 0.16);
   border-radius: 100vw;
@@ -49,18 +55,22 @@ body {
   margin-left: 20rem;
   margin-right: 20rem;
 }
+
 .custom-scrollbar::-webkit-scrollbar-thumb {
   border-radius: 24px;
   background: #ff0004;
   border-radius: 100vw;
 }
+
 .text-decoration-none {
   text-decoration: none;
 }
+
 .backdropFilter {
   background: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(4px);
 }
+
 .header-title {
   color: #fff;
   font-family: Gotham Ultra;
@@ -70,6 +80,7 @@ body {
   text-transform: uppercase;
   white-space: nowrap;
 }
+
 .italic-title {
   font-family: Gotham Ultra;
   font-style: italic;
@@ -81,6 +92,7 @@ body {
   -webkit-text-stroke-color: #ff0004;
   white-space: nowrap;
 }
+
 .content__desc {
   color: #fff;
   text-align: center;
@@ -90,6 +102,7 @@ body {
   font-weight: 400;
   line-height: 160%;
 }
+
 /* loader */
 #loading-overlay {
   position: fixed;
@@ -104,6 +117,7 @@ body {
   z-index: 1000;
   background-color: #010101;
 }
+
 #loader-lottie-container {
   width: 500px;
 }
@@ -122,6 +136,7 @@ body {
   overflow-x: auto;
   display: block;
 }
+
 .nav-link-container {
   display: flex;
   gap: 8px;
@@ -132,12 +147,14 @@ body {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
 }
+
 .nav-item {
   padding: 16px;
   position: relative;
   cursor: pointer;
   display: block;
 }
+
 .nav-link {
   color: #fff;
   font-family: GothamLight;
@@ -147,6 +164,7 @@ body {
   font-weight: 300;
   cursor: pointer;
 }
+
 .nav-item.active::after {
   content: "";
   position: absolute;
@@ -158,9 +176,11 @@ body {
   background: red;
   border-radius: 8px 8px 0px 0px;
 }
+
 .nav-item.active .nav-link {
   font-weight: 700;
 }
+
 /* end */
 
 /* GET EXPERIENCE */
@@ -171,11 +191,13 @@ body {
   /* height: calc(100vh - 57px); */
   z-index: 2;
 }
+
 .bgvideo {
   object-fit: cover;
   width: 100%;
   height: 100%;
 }
+
 .get-experience::before {
   content: "";
   position: absolute;
@@ -184,6 +206,7 @@ body {
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 1;
 }
+
 .content__container {
   position: absolute;
   top: 35%;
@@ -196,77 +219,93 @@ body {
   align-items: center;
   gap: 40px;
 }
+
 .content {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 16px;
 }
+
 .get-experience-header {
   display: flex;
   align-items: center;
   gap: 16px;
 }
+
 .get-experience-title {
   font-size: 48px;
 }
+
 .get-experience-italic-title {
   font-size: 48px;
   -webkit-text-stroke-width: 2.4px;
 }
+
 .ctas {
   display: flex;
   align-items: center;
   gap: 24px;
 }
+
 .redirect-btn {
   position: relative;
   display: flex;
   text-decoration: none;
 }
+
 .redirect-btn .corner-border {
   transform: translate3d(0.2, 0.2, 0.2);
   opacity: 0;
   transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
 }
+
 .redirect-btn:hover .image1 {
   opacity: 1;
   transform: translate3d(5px, 5px, 20px);
 }
+
 .redirect-btn:hover .image2 {
   opacity: 1;
   transform: translate3d(5px, 6px, 20px);
 }
+
 .redirect-btn:hover .image3 {
   opacity: 1;
   transform: translate3d(5px, 6px, 20px);
 }
+
 .redirect-btn:hover .image4 {
   opacity: 1;
   transform: translate3d(5px, 6px, 20px);
 }
+
 .image1 {
   position: absolute;
   right: 0;
   bottom: 0;
   transform: translateX(-10%);
 }
+
 .image2 {
   position: absolute;
   right: 0;
   rotate: -90deg;
 }
+
 .image3 {
   position: absolute;
   left: 0;
   bottom: 0;
   rotate: 90deg;
 }
+
 .image4 {
   position: absolute;
   top: 0;
   rotate: 180deg;
 }
+
 .enquire-now1 {
   color: #fff;
   position: relative;
@@ -282,6 +321,7 @@ body {
   background: rgba(255, 255, 255, 0.16);
   cursor: pointer;
 }
+
 .feature_btn1,
 .feature_btn {
   text-decoration: none;
@@ -297,9 +337,11 @@ body {
   cursor: pointer;
   white-space: nowrap;
 }
+
 .feature_btn {
   padding: 12px 24px;
 }
+
 .feature_btn1 {
   padding: 12px 36px;
 }
@@ -358,24 +400,29 @@ body {
   background-size: cover;
   border: none;
 }
+
 .specification-content {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 16px;
 }
+
 .key-spec-header-container {
   display: flex;
   align-items: center;
   gap: 16px;
 }
+
 .key-specs-header {
   font-size: 48px;
 }
+
 .key-spec-italic-title {
   font-size: 48px;
   -webkit-text-stroke-width: 2.4px;
 }
+
 .spcscontainer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -384,11 +431,13 @@ body {
   grid-column-gap: 24px;
   width: 100%;
 }
+
 .feature-item {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
+
 .key-specs-title {
   color: #fff;
   text-align: center;
@@ -403,6 +452,7 @@ body {
   gap: 8px;
   white-space: nowrap;
 }
+
 .key-specs-title sub {
   color: #fff;
   font-family: Gothambold;
@@ -411,6 +461,7 @@ body {
   font-weight: 700;
   line-height: 150%;
 }
+
 .key-spec-desc {
   color: rgba(255, 255, 255, 0.9);
   text-align: center;
@@ -420,10 +471,12 @@ body {
   font-weight: 400;
   line-height: 150%;
 }
+
 .brochure-container {
   display: flex;
   gap: 24px;
 }
+
 .brochurebtn {
   display: flex;
   align-items: center;
@@ -458,9 +511,36 @@ body {
   -webkit-text-stroke-color: #ff0004;
 }
 
+.section__three .black-overlay {
+  background: radial-gradient(circle, transparent, black, black);
+  opacity: 0;
+  z-index: 3;
+  position: fixed;
+  top: -32%;
+  left: -9%;
+  width: 200%;
+  height: 200%;
+}
+
 /* Section One */
 .light__img,
-.light__img__tab {
+.light__img__tab,
+.front__suspension,
+.front__suspension__tab,
+.abs,
+.abs__tab,
+.abs-brake,
+.abs-brake__tab,
+.back-abs,
+.back-abs__tab,
+.web_power__tab,
+.box,
+.torque,
+.torque__tab,
+.exhaust,
+.exhaust__tab,
+.monoshock,
+.monoshock__tab {
   display: none;
 }
 
@@ -479,5 +559,147 @@ body {
   top: -5%;
   left: 7%;
   transform: scale(1.5);
+  opacity: 0;
+}
+
+.front__suspension__desktop {
+  position: fixed;
+  top: -4%;
+  left: -5.5%;
+  opacity: 0;
+}
+
+/* section three */
+.section__three .feature__text {
+  right: 5%;
+  top: 50%;
+  transform: translateY(-60%);
+  position: fixed;
+  opacity: 0;
+  z-index: 8;
+}
+
+
+/* section five */
+.section__five {}
+
+.section__five .title {
+  right: 5%;
+  top: 50%;
+  transform: translateY(-60%);
+  position: fixed;
+  opacity: 0;
+  z-index: 8;
+}
+
+.section__seven .title {
+  right: 5%;
+  top: 50%;
+  transform: translateY(-60%);
+  position: fixed;
+  opacity: 0;
+  z-index: 8;
+}
+
+.section__nine .title {
+  width: 38%;
+  left: 10%;
+  top: 40%;
+  transform: translateY(-60%);
+  text-align: left;
+  position: fixed;
+  opacity: 0;
+}
+
+.section__eleven .title {
+  width: 45%;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 20%;
+  text-align: center;
+  position: fixed;
+  opacity: 0;
+}
+
+.section__thirteen .feature__text {
+  width: 42%;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 20%;
+  position: fixed;
+  text-align: center;
+  opacity: 0;
+}
+
+.section__fifteen .feature__text {
+  text-align: left;
+  width: 55%;
+  left: 50%;
+  top: 20%;
+  opacity: 0;
+  position: fixed;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.section__seventeen .feature__text {
+  position: fixed;
+  width: 35%;
+  text-align: left;
+  left: 10%;
+  top: 50%;
+  transform: translateY(-60%);
+  opacity: 0;
+}
+
+.abs-brake__desktop {
+  position: fixed;
+  top: -20%;
+  left: -12.5%;
+  opacity: 0;
+  transform: scale(1.5);
+}
+
+.abs__desktop {
+  position: fixed;
+  top: -2%;
+  left: -10%;
+  opacity: 0;
+}
+
+.back-abs__desktop {
+  position: fixed;
+  top: -5%;
+  left: -0.5%;
+  opacity: 0;
+  transform: scale(1.1);
+}
+
+.web_power__desktop {
+  position: fixed;
+  top: 8%;
+  left: 0.5%;
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+.torque__desktop {
+  position: fixed;
+  top: 8%;
+  left: 0.5%;
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+.exhaust__desktop {
+  position: fixed;
+  top: 18%;
+  opacity: 0;
+}
+
+.monoshock__desktop {
+  position: fixed;
+  top: 6%;
+  left: 9%;
   opacity: 0;
 }

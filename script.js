@@ -75,32 +75,36 @@ loader.load("model/bajaj.glb", (gltf) => {
     mesh1.scale.set(13, 13, 13);
     camera.position.z = 25;
 
+    //Section One
     const t1 = gsap.timeline({
       scrollTrigger: {
         trigger: ".section__one",
-        start: "top top",
+        start: "top 50%",
         end: "bottom top",
-        markers: true,
+        // markers: true,
         scrub: 0.5,
-        duration: 10,
+        duration: 20,
       },
     });
     t1.to(mesh1.position, {
       x: -13.5,
       duration: 6,
       ease: "power2.inOut",
-    })
-      .to(".light__img__desktop", { opacity: 1, duration: 6 })
-      .to(".section__one .title", { opacity: 1 });
+    });
+    t1.to(".light__img__desktop", { opacity: 1 });
+    t1.to(".section__one .title", { opacity: 1 });
+    // .to(".light__img__desktop", { opacity: 1, duration: 2 })
+    // .to(".section__one .title", { opacity: 1 });
 
+    //Section two
     const t2 = gsap.timeline({
       scrollTrigger: {
         trigger: ".section__two",
         start: "top top",
         end: "bottom 50%",
-        markers: true,
+        // markers: true,
         scrub: 0.5,
-        duration: 3,
+        duration: 20,
       },
     });
     t2.to(
@@ -122,6 +126,334 @@ loader.load("model/bajaj.glb", (gltf) => {
       duration: 10,
       scrub: 0.5,
     });
+
+    //Section Three
+    const t3 = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".section__three",
+        start: "top top",
+        end: "bottom 50%",
+        // markers: true,
+        scrub: 0.5,
+        duration: 3,
+      },
+    });
+    t3.to(".black-overlay", {
+      opacity: 0.9,
+      left: "-70%",
+    });
+    t3.to(".section__three .title", {
+      opacity: 1,
+      duration: 2,
+      scrub: 0.3,
+    });
+    t3.to(
+      ".front__suspension__desktop",
+      {
+        opacity: 1,
+      },
+      "ss"
+    );
+
+    //Section four
+    const t4 = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".section__four",
+        start: "top top",
+        end: "bottom 50%",
+        // markers: true,
+        scrub: 0.5,
+        duration: 3,
+      },
+    });
+    t4.to(".black-overlay", { opacity: 0 });
+    t4.to(".front__suspension__desktop", { opacity: 0 });
+    t4.to(".section__three .title", { opacity: 0 });
+
+    //Section five
+    const t5 = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".section__five",
+        start: "top top",
+        end: "bottom 50%",
+        // markers: true,
+        scrub: 0.5,
+        duration: 3,
+      },
+    });
+    t5.to(".black-overlay", {
+      opacity: 0.9,
+      left: "-70%",
+    });
+    t5.to(".section__five .title", {
+      opacity: 1,
+      duration: 2,
+      scrub: 0.3,
+    });
+    t5.to(".abs__desktop", {
+      opacity: 1,
+    });
+
+    //Section five
+    const t6 = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".section__six",
+        start: "top top",
+        end: "bottom 50%",
+        // markers: true,
+        scrub: 0.5,
+        duration: 3,
+      },
+    });
+    t6.to(".black-overlay", {
+      opacity: 0,
+      left: "-70%",
+      duration: 2,
+    });
+    t6.to(".section__five .title", {
+      opacity: 0,
+      duration: 2,
+      scrub: 0.3,
+    });
+    t6.to(".abs__desktop", {
+      opacity: 0,
+      duration: 2,
+    });
+
+    //Section seven
+    const t7 = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".section__seven",
+        start: "top top",
+        end: "bottom 50%",
+        // markers: true,
+        scrub: 0.5,
+        duration: 3,
+      },
+    });
+    t7.to(".black-overlay", {
+      opacity: 1,
+    });
+    t7.to(".section__seven .title", {
+      opacity: 1,
+    });
+    t7.to(".abs-brake__desktop", {
+      opacity: 1,
+    });
+    //Section eight
+    const t8 = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".section__eight",
+        start: "top top",
+        end: "bottom 50%",
+        // markers: true,
+        scrub: 0.5,
+        duration: 3,
+      },
+    });
+    t8.to(".black-overlay", {
+      opacity: 0,
+    });
+    t8.to(".section__seven .title", {
+      opacity: 0,
+    });
+    t8.to(".abs-brake__desktop", {
+      opacity: 0,
+    });
+
+    //Section nine
+    const t9 = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".section__nine",
+        start: "top top",
+        end: "bottom 50%",
+        // markers: true,
+        scrub: 0.5,
+        duration: 3,
+      },
+    });
+
+    t9.to(camera.position, {
+      x: -20.3,
+      duration: 1,
+    });
+    t9.to(".black-overlay", {
+      opacity: 1,
+    });
+    t9.to(".section__nine .title", {
+      opacity: 1,
+    });
+    t9.to(".back-abs__desktop", {
+      opacity: 1,
+    });
+    //Section nine
+    const t10 = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".section__ten",
+        start: "top top",
+        end: "bottom 50%",
+        // markers: true,
+        scrub: 0.5,
+        duration: 3,
+      },
+    });
+
+    t10.to(".section__nine .title", {
+      opacity: 0,
+    });
+    t10.to(".back-abs__desktop", {
+      opacity: 0,
+    });
+
+    const t11 = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".section__eleven",
+        start: "top top",
+        end: "bottom 50%",
+        // markers: true,
+        scrub: 0.5,
+        duration: 3,
+      },
+    });
+    t11.to(camera.position, {
+      x: -13.6,
+    });
+    t11.to(".black-overlay", {
+      opacity: 1,
+    });
+
+    t11.to(".section__eleven .title", {
+      opacity: 1,
+    });
+    t11.to(".web_power__desktop", {
+      opacity: 1,
+    });
+
+    //Section twelve
+    const t12 = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".section__twelve",
+        start: "top top",
+        end: "bottom 50%",
+        // markers: true,
+        scrub: 0.5,
+        duration: 3,
+      },
+    });
+
+    t12.to(".black-overlay", {
+      opacity: 0,
+    });
+
+    t12.to(".section__eleven .title", {
+      opacity: 0,
+    });
+    // t12.to(".web_power__desktop", {
+    //   opacity: 0,
+    // });
+
+    //Section thirteen
+    const t13 = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".section__thirteen",
+        start: "top top",
+        end: "bottom 50%",
+        // markers: true,
+        scrub: 0.5,
+        duration: 3,
+      },
+    });
+    t13.to(".black-overlay", {
+      opacity: 1,
+    });
+    t13.to(".section__thirteen .title", { opacity: 1 });
+    t13.to(".torque__desktop", { opacity: 1 });
+    t13.to(".web_power__desktop", {
+      opacity: 0,
+    });
+
+    //Section fourteen
+    const t14 = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".section__fourteen",
+        start: "top top",
+        end: "bottom 50%",
+        // markers: true,
+        scrub: 0.5,
+        duration: 3,
+      },
+    });
+
+    t14.to(".section__thirteen .title", { opacity: 0 });
+    t14.to(".torque__desktop", { opacity: 0 });
+
+    //Section fifteen
+    const t15 = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".section__fifteen",
+        start: "top top",
+        end: "bottom 50%",
+        // markers: true,
+        scrub: 0.5,
+        duration: 3,
+      },
+    });
+    t15.to(camera.position, {
+      x: -17,
+      z: 20.5,
+      y: -1.5,
+    });
+    t15.to(".black-overlay", {
+      opacity: 1,
+      top: "6%",
+      left: "-67%",
+    });
+    t15.to(".section__fifteen .title", {
+      opacity: 1,
+    });
+    t15.to(".exhaust__desktop", { opacity: 1 });
+
+    //Section fifteen
+    const t16 = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".section__sixteen",
+        start: "top top",
+        end: "bottom 50%",
+        // markers: true,
+        scrub: 0.5,
+        duration: 3,
+      },
+    });
+
+    t16.to(".black-overlay", {
+      opacity: 0,
+    });
+    t16.to(".section__fifteen .title", {
+      opacity: 0,
+    });
+    t16.to(".exhaust__desktop", { opacity: 0 });
+
+    //Section seventeen
+    const t17 = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".section__seventeen",
+        start: "top top",
+        end: "bottom 50%",
+        markers: true,
+        scrub: 0.5,
+        duration: 3,
+      },
+    });
+    t17.to(camera.position, {
+      y: -0.5,
+      x: -22,
+      z: 23.5,
+    });
+    t17.to(".black-overlay", { opacity: 1, top: "8%", left: "-18%" });
+    t17.to(".section__seventeen .title", {
+      opacity: 1,
+    });
+    t17.to(".monoshock__desktop", { opacity: 1 });
   }
 
   ScrollTrigger.create({
@@ -129,11 +461,11 @@ loader.load("model/bajaj.glb", (gltf) => {
     start: "50% 50%",
     // markers: true,
     onEnter: () => {
-      canvas.style.transform = "translateY(-200%)";
+      canvas.style.transform = "translateY(-1700%)";
     },
     onEnterBack: () => {
       canvas.style.position = "relative";
-      canvas.style.transform = "translateY(-200%)";
+      canvas.style.transform = "translateY(-1700%)";
     },
     onLeaveBack: () => {
       canvas.style.position = "relative";
@@ -153,6 +485,14 @@ loader.load("model/bajaj.glb", (gltf) => {
       document.querySelector(".light__img__desktop").style.zIndex = "5";
       document.querySelector(".section__two").style.zIndex = "5";
       document.querySelector(".section__three").style.zIndex = "5";
+      document.querySelector(".section__four").style.zIndex = "5";
+      document.querySelector(".section__five").style.zIndex = "5";
+      document.querySelector(".section__seven").style.zIndex = "5";
+      document.querySelector(".section__nine").style.zIndex = "5";
+      document.querySelector(".section__eleven").style.zIndex = "5";
+      document.querySelector(".section__thirteen").style.zIndex = "5";
+      document.querySelector(".section__fifteen").style.zIndex = "5";
+      document.querySelector(".section__seventeen").style.zIndex = "5";
       canvas.style.transform = "translateY(0%)";
     },
     onLeaveBack: () => {
@@ -162,7 +502,7 @@ loader.load("model/bajaj.glb", (gltf) => {
   });
 
   ScrollTrigger.create({
-    trigger: ".section__three",
+    trigger: ".section__eighteen",
     start: "top top",
     end: "",
     // markers: true,
@@ -183,7 +523,6 @@ loader.load("model/bajaj.glb", (gltf) => {
     const action = mixer.clipAction(animations[0]); // Assuming the first animation is the loop
     action.play();
   }
-
   scene.add(mesh1);
 });
 
