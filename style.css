@@ -5,7 +5,7 @@
 }
 
 body {
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   position: relative;
   height: 100%;
 }
@@ -120,6 +120,15 @@ body {
 
 #loader-lottie-container {
   width: 500px;
+}
+
+.webgl2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  touch-action: auto;
+  width: 100% !important;
+  height: 100% !important;
 }
 
 /* end */
@@ -383,8 +392,6 @@ body {
   z-index: 1;
 }
 
-
-
 .feature__text {
   font-size: 40px;
   font-weight: 500;
@@ -545,10 +552,13 @@ body {
 
 .abs-brake__desktop {
   position: fixed;
-  top: -20%;
-  left: -12.5%;
-  opacity: 0;
-  transform: scale(1.5);
+  width: 100%;
+  height: 100%;
+  top: -5%;
+  left: 35%;
+  /* opacity: 0; */
+  display: none;
+  transform: translateX(-50%);
 }
 
 .abs__desktop {
@@ -1154,12 +1164,9 @@ body {
 }
 
 
-
-
-
-/* @media (max-width: 361px) {
+@media (max-width: 361px) {
   .abs-brake {
-    bottom: 8%;
+    bottom: 1%;
     left: -1%;
     transform: scale(1.3);
   }
@@ -1169,11 +1176,11 @@ body {
   }
 
   .back-abs {
-    bottom: 5% !important;
-    left: -2%;
-    transform: scale(1.2);
+    bottom: -5% !important;
+    left: -1%;
+    transform: scale(1.1);
   }
-} */
+}
 
 /*Mobile Screen Responsive Media Queries ends*/
 
@@ -1292,20 +1299,32 @@ body {
   text-decoration: none;
 }
 
-
 /* usb-mobile-section */
 .usb-mobile-section {
   position: relative;
+  z-index: 10;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 100vh;
-  background-image: url("/images/ChargingPointBackground.png");
+  background-image: url("/images/charging_port_new.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: #010101;
+}
+
+.usb-mobile-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, #131313 12%, rgba(0, 0, 0, 0) 64.66%);
+  z-index: 1;
 }
 
 .usbcontent {
@@ -1315,6 +1334,11 @@ body {
   gap: 16px;
   max-width: 800px;
   width: 100%;
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
 }
 
 .usb-title {
@@ -1341,10 +1365,13 @@ body {
 }
 
 .lottie-container {
-  width: 400px;
-  height: 350px;
+  width: 80vw;
+  height: 90vh;
+  position: absolute;
+  /* top: 11.1%; */
+  left: 50%;
+  transform: translateX(-50%);
 }
-
 
 /* riding ergonomics */
 .riding-ergonomics {
@@ -1355,6 +1382,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
+  z-index: 10;
 }
 
 .erogonomics-content {
@@ -1533,6 +1561,7 @@ body {
 /* pricing Section */
 .pricing-section {
   position: relative;
+  z-index: 10;
   width: 100vw;
   height: 100vh;
   background-image: url("/images/PricingBackgroundImage.png");
@@ -1787,11 +1816,11 @@ body {
 /* Gallery Section */
 .gallery-section {
   position: relative;
+  z-index: 10;
   background: #010101;
   height: 100%;
   padding-top: 30px;
   border: 1px solid black;
-  z-index: 10;
 }
 
 .gallery-header {
@@ -1829,8 +1858,8 @@ body {
 
 .popup {
   position: relative;
-  width: 60vw;
-  height: 70vh;
+  width: 65vw;
+  height: 71vh;
 }
 
 img#popup-image {
@@ -1911,12 +1940,14 @@ img#popup-image {
 }
 
 /* end */
+
 /* Expert talks with swiper slider */
 .expert-talks-section {
   background: #010101;
   position: relative;
+  z-index: 8;
   width: 100vw;
-  height: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1992,12 +2023,13 @@ img#popup-image {
   position: absolute;
   width: 1025px;
   height: 70vh;
-  top: 20%;
+  border-radius: 16px;
 }
 
 .youtubePopUp {
   width: 100%;
   height: 100%;
+  border-radius: 16px;
 }
 
 .youtube-close-btn {
@@ -2031,7 +2063,7 @@ img#popup-image {
 .swiper-rtl {
   width: 48px !important;
   height: 48px !important;
-  top: 86% !important;
+  top: 76% !important;
   left: 48% !important;
   transform: translateX(-50%) !important;
 }
@@ -2040,7 +2072,7 @@ img#popup-image {
 .swiper-rtl {
   width: 48px !important;
   height: 48px !important;
-  top: 86% !important;
+  top: 76% !important;
   right: 44% !important;
   transform: translateX(-50%) !important;
 }
@@ -2049,7 +2081,8 @@ img#popup-image {
 
 /*FAQ section*/
 .faq-section {
-  position: relative;
+  width: 100%;
+  height: 100%;
   display: grid;
   justify-content: space-between;
   grid-template-columns: 35% 55% 1%;
@@ -2059,6 +2092,7 @@ img#popup-image {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
+  position: relative;
   z-index: 10;
 }
 
@@ -2066,7 +2100,7 @@ img#popup-image {
   position: relative;
   z-index: 1;
   width: 100%;
-  max-height: 760px;
+  max-height: 700px;
   height: 100%;
 }
 
@@ -2104,7 +2138,7 @@ img#popup-image {
 
 .faq-italic-text {
   font-size: 48px;
-  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-width: 1.7px;
 }
 
 .faq-section-right-content {
@@ -2127,10 +2161,9 @@ img#popup-image {
   cursor: pointer;
   outline: none;
   display: flex;
-  column-gap: 4rem;
-  padding: 0px 10px 16px 10px;
-  justify-content: space-between;
   align-items: center;
+  gap: 42px;
+  padding: 0px 0px 16px 0px;
   transition: background-color 0.3s ease;
   font-weight: 400;
 }
@@ -2139,10 +2172,13 @@ img#popup-image {
   font-size: 16px;
   font-family: GothamLight;
   color: #fff;
-  text-align: center;
+  text-align: left;
   font-style: normal;
   font-weight: 400;
   line-height: 160%;
+  white-space: nowrap;
+  width: 100%;
+  letter-spacing: 1px;
 }
 
 .accordion-header:hover {
@@ -2152,11 +2188,10 @@ img#popup-image {
 .accordion-content {
   background-color: #fafafa;
   overflow: hidden;
-  padding: 0 0.6rem;
+  padding: 0px 10px 0px 0px;
   max-height: 0;
   transition: max-height 0.3s ease;
   font-size: 14px;
-  font-family: Gotham;
   background: #000;
   color: white;
   max-width: 730px;
@@ -2171,8 +2206,9 @@ img#popup-image {
 
 .accordion-content p {
   margin: 0px 50px 10px 0px;
-  line-height: 1.5;
-  font-family: GothamLight;
+  line-height: 160%;
+  font-family: Gothambook;
+  text-align: justify;
 }
 
 .icon {
@@ -2200,6 +2236,7 @@ img#popup-image {
   height: 100vh;
   overflow: hidden;
   position: relative;
+  z-index: 10;
 }
 
 .app-info-container {
@@ -2391,7 +2428,7 @@ img#popup-image {
 
   /* Usb Mobile Charging */
   .usb-mobile-section {
-    background-image: url("/images/chargingTab.png");
+    background-image: url("/images/charging_port_new.jpg");
     background-color: #000;
     gap: 60px;
   }
@@ -2414,7 +2451,8 @@ img#popup-image {
   }
 
   .lottie-container {
-    height: 520px;
+    width: 100%;
+    height: 100%;
   }
 
   /* riding ergonomics */
@@ -2826,9 +2864,6 @@ img#popup-image {
     gap: 8px;
   }
 
-  /* .content__container .content__desc {
-    width: 340px;
-  } */
   .header .italic-title {
     font-size: 24px;
     -webkit-text-stroke-width: 1.4px;
@@ -2932,8 +2967,8 @@ img#popup-image {
   }
 
   .lottie-container {
-    width: 200px;
-    height: 400px;
+    width: 100vw;
+    height: 100vh;
   }
 
   /* riding-ergonomics */
