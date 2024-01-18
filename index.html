@@ -29,7 +29,7 @@
   <script type="module" src="/lib/lottieplayer.js"></script>
 </head>
 
-<body class="hide-scrollbar">
+<body class="hide-scrollbar" onload="init()">
 
   <!-- Loader Lottie -->
   <!-- <div id="loading-overlay">
@@ -191,7 +191,7 @@
     <section class="section section__eleven">
       <div class="title feature__text">
         <p>
-          All-New Refined twin spark, oil cooled
+          All-New Refined twin spark, oil cooled <br>
           <span class="red-title">DTS-i Engine</span>
         </p>
       </div>
@@ -1089,9 +1089,9 @@
   <!-- Script for gallery overlay -->
   <script>
 
-    document.addEventListener('DOMContentLoaded', function () {
-      init()
-    });
+    // document.addEventListener('DOMContentLoaded', function () {
+    //   init()
+    // });
 
     const overlay = document.getElementById("overlay");
     const popupImage = document.getElementById("popup-image");

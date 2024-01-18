@@ -917,7 +917,7 @@ function loadMainModel(modelPath1) {
       });
       t1.to(mesh1.position, {
         x: -13.5,
-        duration: 6,
+        duration: 2,
         ease: "power2.inOut",
       });
       t1.to(".light__img__desktop", { opacity: 1 });
